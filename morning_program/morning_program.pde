@@ -1,4 +1,4 @@
-//import ddf.minim.*;
+import ddf.minim.*;
 
 Minim minim;
 AudioPlayer message;
