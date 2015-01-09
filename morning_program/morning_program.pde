@@ -15,7 +15,7 @@ int repeat = -1;
 PFont font;
 
 void setup(){
-  size(873,513);
+  size(963,513);
   
   minim = new Minim(this);
   
