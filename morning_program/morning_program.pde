@@ -71,7 +71,7 @@ void draw(){
   }
   
   if(repeat == 10 || repeat == 5 || repeat == 0){
-    message = minim.loadFile(change+".wav");
+    message = minim.loadFile(change+".mp3");
     message.play();
   }
   if(repeat > -1){
