@@ -1,7 +1,7 @@
 //import ddf.minim.*;
 
-//Minim minim;
-//AudioPlayer message;
+Minim minim;
+AudioPlayer message;
 
 int marker = -1;
 int durration;
@@ -17,7 +17,7 @@ PFont font;
 void setup(){
   size(873,513);
   
-  //minim = new Minim(this);
+  minim = new Minim(this);
   
   time[0] = 0; words[0] = "Wake up and\nget to kitchen";
   time[1] = 5; words[1] = "Drink breakfast/coffee";
@@ -71,8 +71,8 @@ void draw(){
   }
   
   if(repeat == 10 || repeat == 5 || repeat == 0){
-    //message = minim.loadFile(change+".wav");
-    //message.play();
+    message = minim.loadFile(change+".wav");
+    message.play();
   }
   if(repeat > -1){
     repeat-=1;
