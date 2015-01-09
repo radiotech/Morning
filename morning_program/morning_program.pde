@@ -71,7 +71,9 @@ void draw(){
   }
   
   if(repeat == 10 || repeat == 5 || repeat == 0){
-    message = minim.loadFile("http://interactivecomputing2013.globalblogs.org/files/2013/10/boing.mp3");//change+".mp3");
+    //message = minim.loadFile("http://interactivecomputing2013.globalblogs.org/files/2013/10/boing.mp3");//change+".mp3");
+    message = minim.loadFile(change+".mp3");
+    
     message.play();
   }
   if(repeat > -1){
