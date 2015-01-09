@@ -27,13 +27,13 @@ void setup(){
   time[5] = 16; words[5] = "Take coconut oil and\nget to the shower";
   time[6] = 19; words[6] = "Start and enter\nthe shower";
   time[7] = 21; words[7] = "Use the amber\nbar soap";
-  time[8] = 24; words[8] = "Rinse off";
-  time[9] = 27; words[9] = "Turn the water\noff and dry";
-  time[10] = 30; words[10] = "Take coconut oil\ncontainer down\nto kitchen";
-  time[11] = 37; words[11] = "Get dressed and\napply deodorant";
-  time[12] = 42; words[12] = "Mess with face";
-  time[13] = 48; words[13] = "Mess with hair";
-  time[14] = 55; words[14] = "get: folders, laptop,\ncharger, phone, lunch,\ndrink, else"; 
+  time[8] = 23; words[8] = "Rinse off";
+  time[9] = 25; words[9] = "Turn the water\noff and dry";
+  time[10] = 28; words[10] = "Take coconut oil\ncontainer down\nto kitchen";
+  time[11] = 35; words[11] = "Get dressed and\napply deodorant";
+  time[12] = 40; words[12] = "Mess with face";
+  time[13] = 46; words[13] = "Mess with hair";
+  time[14] = 53; words[14] = "get: folders, laptop,\ncharger, phone, lunch,\ndrink, else"; 
   
   durration = floor(time[times-1]+1);
   
