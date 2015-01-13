@@ -4,10 +4,10 @@ Minim minim;
 AudioPlayer message;
 
 int marker = -1;
-int durration;
-float pad = 20;
+float durration;
+int pad = 20;
 int times = 15;
-int time[] = new int[times];
+float time[] = new float[times];
 String words[] = new String[times];
 int change = -1;
 int repeat = -1;
@@ -22,18 +22,18 @@ void setup(){
   time[0] = 0; words[0] = "Wake up and\nget to kitchen";
   time[1] = 5; words[1] = "Drink breakfast/coffee";
   time[2] = 10; words[2] = "Brush teeth ready";
-  time[3] = 12; words[3] = "Brush teeth start";
-  time[4] = 15; words[4] = "Brush teeth end";
-  time[5] = 16; words[5] = "Take coconut oil and\nget to the shower";
-  time[6] = 19; words[6] = "Start and enter\nthe shower";
-  time[7] = 21; words[7] = "Use the amber\nbar soap";
-  time[8] = 23; words[8] = "Rinse off";
-  time[9] = 25; words[9] = "Turn the water\noff and dry";
-  time[10] = 28; words[10] = "Take coconut oil\ncontainer down\nto kitchen";
-  time[11] = 35; words[11] = "Get dressed and\napply deodorant";
-  time[12] = 40; words[12] = "Mess with face";
-  time[13] = 46; words[13] = "Mess with hair";
-  time[14] = 53; words[14] = "get: folders, laptop,\ncharger, phone, lunch,\ndrink, else"; 
+  time[3] = 11; words[3] = "Brush teeth start";
+  time[4] = 14; words[4] = "Brush teeth end";
+  time[5] = 15; words[5] = "Get to the shower";
+  time[6] = 17; words[6] = "Start and enter\nthe shower";
+  time[7] = 19; words[7] = "Use the amber\nbar soap";
+  time[8] = 21; words[8] = "Rinse off";
+  time[9] = 23; words[9] = "Turn the water\noff and dry";
+  time[10] = 25; words[10] = "Get to the kitchen";
+  time[11] = 27; words[11] = "Get dressed and\napply deodorant";
+  time[12] = 32; words[12] = "Mess with face";
+  time[13] = 38; words[13] = "Mess with hair";
+  time[14] = 45; words[14] = "get: folders, laptop,\ncharger, phone, lunch,\ndrink, else"; 
   
   durration = floor(time[times-1]+1);
   
@@ -44,25 +44,6 @@ void setup(){
 }
   
 void draw(){
-  background(0);
-  strokeWeight(2);
-  noFill();
-  stroke(255);
-  rect(2,2,width-5,height-5);
-  strokeWeight(pad/10);
-  stroke(255);
-  line(pad,height-pad,width-pad,height-pad);
-  line(pad+float(marker)/60*(width-pad*2)/durration,height-pad*.75,pad+float(marker)/60*(width-pad*2)/durration,height-pad*1.25);
-  noStroke();
-  fill(255);
-  
-  for(int i = 0; i < times; i++){
-    ellipse(pad+time[i]*(width-pad*2)/durration,height-pad,pad/4,pad/4);
-  }
-  
-  if(marker<time[times-1]*60){
-    rect(pad,height-pad*2.5,(marker-time[lastPoint(marker)]*60)*(width-pad*2)/(time[lastPoint(marker)+1]*60-time[lastPoint(marker)]*60),pad/2);
-  }
   
   if(lastPoint(marker) != change){
     change = lastPoint(marker);
@@ -88,6 +69,25 @@ void draw(){
     marker++;
   }
   
+  background(0);
+  strokeWeight(2);
+  noFill();
+  stroke(255);
+  rect(2,2,width-5,height-5);
+  strokeWeight(pad/10);
+  stroke(255);
+  line(pad,height-pad,width-pad,height-pad);
+  line(pad+float(marker)/60*(width-pad*2)/durration,height-pad*.75,pad+float(marker)/60*(width-pad*2)/durration,height-pad*1.25);
+  noStroke();
+  fill(255);
+  
+  for(int i = 0; i < times; i++){
+    ellipse(pad+time[i]*(width-pad*2)/durration,height-pad,pad/4,pad/4);
+  }
+  
+  if(marker<time[times-1]*60){
+    rect(pad,height-pad*2.5,(marker-time[lastPoint(marker)]*60)*(width-pad*2)/(time[lastPoint(marker)+1]*60-time[lastPoint(marker)]*60),pad/2);
+  }
   
   textFont(font, 70);
   textAlign(CENTER,CENTER);
@@ -131,11 +131,11 @@ void mousePressed(){
 }
 
 void next(){
-  marker = 60*time[median(lastPoint(marker)+1,0,times-1)];
+  marker = ceil(60*time[median(lastPoint(marker)+1,0,times-1)]);
 }
 
 void back(){
-  marker = 60*time[median(lastPoint(marker-10),0,times-1)];
+  marker = ceil(60*time[median(lastPoint(marker-10),0,times-1)]);
 }
 
 int median(int a, int b, int c){
