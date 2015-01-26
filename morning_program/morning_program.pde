@@ -22,18 +22,18 @@ void setup(){
   time[0] = 0; words[0] = "Wake up and\nget to kitchen";
   time[1] = 5; words[1] = "Drink breakfast/coffee";
 
-  time[5] = 10; words[5] = "Get to the shower";
-  time[6] = 12; words[6] = "Start and enter\nthe shower";
-  time[7] = 14; words[7] = "Use the amber\nbar soap";
-  time[8] = 16; words[8] = "Rinse off";
-  time[9] = 18; words[9] = "Turn the water\noff and dry";
-  time[10] = 20; words[10] = "Get to the kitchen";
-  time[11] = 22; words[11] = "Get dressed and\napply deodorant";
-  time[12] = 27; words[12] = "Mess with face";
-  time[13] = 33; words[13] = "Mess with hair";
-  time[2] = 40; words[2] = "Brush teeth ready";
-  time[3] = 41; words[3] = "Brush teeth start";
-  time[4] = 44; words[4] = "Brush teeth end";
+  time[2] = 10; words[5] = "Get to the shower";
+  time[3] = 12; words[6] = "Start and enter\nthe shower";
+  time[4] = 14; words[7] = "Use the amber\nbar soap";
+  time[5] = 16; words[8] = "Rinse off";
+  time[6] = 18; words[9] = "Turn the water\noff and dry";
+  time[7] = 20; words[10] = "Get to the kitchen";
+  time[8] = 22; words[11] = "Get dressed and\napply deodorant";
+  time[9] = 27; words[12] = "Mess with face";
+  time[10] = 33; words[13] = "Mess with hair";
+  time[11] = 40; words[2] = "Brush teeth ready";
+  time[12] = 41; words[3] = "Brush teeth start";
+  time[13] = 44; words[4] = "Brush teeth end";
   time[14] = 45; words[14] = "get: folders, laptop,\ncharger, phone, lunch,\ndrink, else"; 
   
   durration = floor(time[times-1]+1);
