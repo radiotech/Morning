@@ -1,7 +1,7 @@
-import ddf.minim.*;
+//import ddf.minim.*;
 
-Minim minim;
-AudioPlayer message;
+//Minim minim;
+//AudioPlayer message;
 
 int marker = -1;
 float durration;
@@ -17,7 +17,7 @@ PFont font;
 void setup(){
   size(963,513);
   
-  minim = new Minim(this);
+  //minim = new Minim(this);
   
   time[0] = 0; words[0] = "Wake up and\nget to kitchen";
   time[1] = 5; words[1] = "Drink breakfast/coffee";
@@ -54,9 +54,9 @@ void draw(){
   
   if(repeat == 10 || repeat == 5 || repeat == 0){
     //message = minim.loadFile("http://interactivecomputing2013.globalblogs.org/files/2013/10/boing.mp3");//change+".mp3");
-    message = minim.loadFile("http://radiotech.github.io/Morning/morning_program/data/"+change+".mp3");
+    //message = minim.loadFile("http://radiotech.github.io/Morning/morning_program/data/"+change+".mp3");
     
-    message.play();
+    //message.play();
   }
   if(repeat > -1){
     repeat-=1;
